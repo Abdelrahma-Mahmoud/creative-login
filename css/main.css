@@ -1,0 +1,339 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebecf0;
+    transition: all 500ms ease-in-out;
+    overflow: hidden;
+}
+.login-form{
+    width: 350px;
+    height: auto;
+
+    z-index: 9999;
+}
+.form-title{
+     text-align: center;
+     padding: 25px 0;
+}
+label{
+    display: block;
+    margin-bottom: 25px;
+    width: 100%; 
+}
+input{
+    margin-right: 8px;
+    box-shadow:inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff ;
+    width: 100%;
+    transition: all .2s ease-in-out;
+       -webkit-appearance: none;  
+}
+input:focus{
+    box-shadow:inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff ; 
+}
+button, input{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 320px;
+    background-color: #ebecf0;
+    padding: 16px;
+    text-shadow: 1px 1px 0 #ebecf0;
+}
+div, p{
+    color: #babecc;
+    text-shadow: 1px 1px 1px #fff;
+}
+p{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 16px;
+}
+button{
+    color: #61677c;
+    font-weight:bold;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    /* box-shadow:inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff ; */
+    box-shadow:inset 2px 2px 5px #fff, inset -5px -5px 10px #babecc ;
+}
+.red{
+    display: block;
+    color: #f39c12;
+    width: 100%;
+}
+button:hover{
+    box-shadow:inset -2px -2px 2px #fff, inset 2px 2px 5px #babecc ; 
+}
+button:active{
+    box-shadow:inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff ; 
+}
+.social-media{
+    padding: 25px 0;
+    text-align: center;
+}
+.social-media .social-icon{
+    border-radius: 8px;
+    line-height: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    font-size: 18px;
+}
+.red i{
+    margin-right: 5px;
+}
+.remember-me{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    position: relative;
+}
+#chb1{
+   display: none;
+}
+.label-chb{
+    margin: 0;
+    display: block; 
+     padding-left: 26px; 
+    position: relative;
+    cursor: pointer;
+}
+.label-chb::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    z-index: -1;
+    background-color: #babecc;
+    border-radius: 2px;
+    transform: translateY(-50%);
+}
+.remember-me i{
+    position: absolute;
+    left: 1px;
+    top: 10%;
+    font-size: 14px;
+    color: #61677c;
+    transition: all 100ma ease-in-out;
+ }
+/* button dark mode */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.container{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200vmin;
+    pointer-events: none;
+    transform: rotate(0);
+    transition: all 1s ease-in-out;
+}
+.theme-toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.theme-toggle:hover,
+.theme-toggle:focus{
+    transform: scale(1.1);
+    color: #f39c12;
+    text-shadow: none;
+    outline: none;
+    border: 0;
+}
+.dark.theme-toggle:hover,
+.dark.theme-toggle:focus{
+    background-color: #05000B;
+
+}
+.sun,
+.moon{
+    position: absolute;
+    transition: all 1s ease-in-out;
+    width: 30px;
+    height: 30px;
+    fill: #f39c12;
+}
+.sun{
+    top: 2%;
+    opacity: 1;
+}
+.moon{
+    bottom:2%;
+    opacity: 0;
+    transform: rotate(180deg);
+}
+.theme-toggle:hover,
+.theme-toggle:focus{
+    transform: scale(1.1);
+}
+/* dark mode */
+.dark .login-form{
+    width: 350px;
+    height: auto;
+    z-index: 9999;
+}
+.dark input{
+    color: #FFF;
+    box-shadow: inset 2px 8px 2px -4px #343740, inset -5px -5px 10px #05000B;	
+}
+.dark input:focus{
+    box-shadow:	 inset 1px 1px 2px #343740, inset -1px -1px 2px #343740;
+}
+.dark button, .dark input{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 320px;
+    background-color: #05000B;
+    padding: 16px;
+    text-shadow: 1px 1px 0 #fff;
+    color: #fff;
+}
+.dark div, .dark p{
+    color: #fff;
+    text-shadow: 1px 1px 1px #FFF;;
+}
+.dark p{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 16px;
+}
+.dark button{
+    color: #fff;
+    font-weight:bold;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    box-shadow:inset 2px 5px 2px -4px #05000B, inset -5px -5px 10px #343740 ;
+}
+.dark .red{
+    display: block;
+    color: #fff;
+    width: 100%;
+}
+.dark button:hover{
+    box-shadow:inset -2px -2px 2px #05000B, inset 2px 2px 5px #343740 ; 
+}
+.dark button:active{
+    box-shadow:inset 1px 1px 2px #343740, inset -1px -1px 2px #343740 ; 
+}
+.dark .social-media{
+    padding: 25px 0;
+    text-align: center;
+}
+.dark .social-media .social-icon{
+        border-radius: 8px;
+        line-height: 0;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 8px;
+        font-size: 18px;
+}
+.dark .red i{
+    margin-right: 5px;
+}
+.dark .remember-me{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    position: relative;
+}
+.dark #chb1{
+   display: none;
+}
+.dark .label-chb{
+    margin: 0;
+    display: block; 
+     padding-left: 26px; 
+    position: relative;
+    cursor: pointer;
+}
+.dark .label-chb::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    z-index: -1;
+    background-color: #343740;
+    border-radius: 2px;
+    transform: translateY(-50%);
+}
+.dark .remember-me i{
+    position: absolute;
+    left: 1px;
+    top: 10%;
+    font-size: 14px;
+    color: #FFF;
+    transition: all 100ms ease-in-out;
+}
+.dark button, .dark input{
+    color: #fff;
+    text-shadow: none;
+    font-weight: bold;
+}
+canvas{
+    display: block; 
+   vertical-align: bottom; 
+} 
+#particles-js{ 
+    position:absolute;
+     width: 100%;
+    height: 100%;
+    background-color: #ebecf0;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: 50% 50%;
+}
+.dark #particles-js{ 
+background-color: #05000B;
+}
+
+.dark input::placeholder{
+    color: #fff;
+}
+
+ 
+
+
+
+/* button dark mood */
+
+.dark .moon{
+    opacity: 1;
+}
+.dark .sun{
+    opacity: 0;
+}
+body.dark{
+    background-color: #000;
+    color: #fff;
+}
+
+ .dark .container{
+    transform: rotate(180deg);
+} 
